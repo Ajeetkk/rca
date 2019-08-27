@@ -25,6 +25,12 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactSyntaxHighlighter = require("react-syntax-highlighter");
+
+var _reactSyntaxHighlighter2 = _interopRequireDefault(_reactSyntaxHighlighter);
+
+var _prism = require("react-syntax-highlighter/dist/esm/styles/prism");
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -67,6 +73,7 @@ function _inherits(subClass, superClass) {
       : (subClass.__proto__ = superClass);
 }
 
+// import mny from "manavify";
 var App = (function(_React$Component) {
   _inherits(App, _React$Component);
 
@@ -136,6 +143,8 @@ var App = (function(_React$Component) {
     {
       key: "render",
       value: function render() {
+        var code =
+          "import RectClockWidget from 'react-clock-app'\n   render() {\n         return (\n          <RectClockWidget />\n   )}";
         return _react2.default.createElement(
           "div",
           null,
@@ -158,14 +167,13 @@ var App = (function(_React$Component) {
                   border: "2px solid",
                   padding: "15px",
                   marginLeft: "25%",
-                  marginRight: "25%",
-                  background: "greenyellow",
-                  boxShadow: "5px 6px yellow"
+                  marginRight: "25%"
                 }
               },
               this.state.clock ? this.state.clock : "Loading widget..."
             )
-          )
+          ),
+          _react2.default.createElement("br", null)
         );
       }
     }
